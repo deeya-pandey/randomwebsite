@@ -1,0 +1,73 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/fraunces';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/noto-sans-devanagari';
+@import '@fontsource-variable/noto-serif-devanagari';
+
+/* Palette taken from the clinic's own flyer: black type, gold ribbon, white paper. */
+@theme {
+  --font-serif: 'Fraunces Variable', 'Noto Serif Devanagari Variable', Georgia, serif;
+  --font-sans: 'Inter Variable', 'Noto Sans Devanagari Variable', system-ui, sans-serif;
+  --color-ivory: #fbf8f3;
+  --color-paper: #ffffff;
+  --color-sand: #f3ece0;
+  --color-ink: #171513;
+  --color-ink-soft: #4b443d;
+  --color-bronze: #7a5b26;       /* deep gold: text & icons on light (≈6.4:1 on ivory) */
+  --color-bronze-light: #d2b47a; /* light gold: text on ink */
+  --color-gold: #b08d57;         /* decorative lines only */
+  --color-ribbon: #8c6a2e;       /* flyer ribbon, white text ≈5:1 */
+  --color-sage: #2f4a3e;
+  --color-mauve: #ece4dc;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--color-ivory); color: var(--color-ink); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+h1, h2, h3 { font-family: var(--font-serif); font-weight: 450; letter-spacing: -0.02em; line-height: 1.05; font-variation-settings: 'opsz' 96; }
+::selection { background: var(--color-bronze-light); color: var(--color-ink); }
+:focus-visible { outline: 3px solid var(--color-bronze); outline-offset: 3px; border-radius: 6px; }
+.on-dark :focus-visible { outline-color: var(--color-bronze-light); }
+
+.arch { border-radius: 999px 999px 28px 28px; }
+.ribbon { display: inline-flex; align-items: stretch; font-family: var(--font-serif); font-size: 1.02rem; }
+.ribbon > span:first-child { background: var(--color-ribbon); color: #fff; padding: .35rem .9rem; }
+.ribbon > span:last-child { width: 6px; background: var(--color-ink); }
+.rule { height: 1px; background: linear-gradient(90deg, var(--color-gold), transparent); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .85rem 1.4rem; border-radius: 999px; font-weight: 600; font-size: .95rem; transition: background .2s, color .2s, transform .2s, box-shadow .2s; min-height: 48px; }
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--color-ink); color: var(--color-ivory); }
+.btn-primary:hover { background: var(--color-ribbon); }
+.btn-gold { background: var(--color-ribbon); color: #fff; }
+.btn-gold:hover { background: var(--color-ink); }
+.btn-wa { background: #1d6b42; color: #fff; }
+.btn-wa:hover { background: #155232; }
+.btn-ghost { border: 1.5px solid currentColor; }
+.btn-ghost:hover { background: var(--color-ink); color: var(--color-ivory); border-color: var(--color-ink); }
+.on-dark .btn-ghost:hover { background: var(--color-ivory); color: var(--color-ink); border-color: var(--color-ivory); }
+.btn-sm { min-height: 42px; padding: .6rem 1rem; font-size: .875rem; }
+.eyebrow { font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; color: var(--color-bronze); display: inline-flex; align-items: center; gap: .75rem; }
+.eyebrow::before { content: ''; width: 28px; height: 1px; background: currentColor; }
+.on-dark .eyebrow { color: var(--color-bronze-light); }
+
+/* FAQ accordion (native <details>) */
+.faq summary { list-style: none; cursor: pointer; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary svg { transition: transform .25s; }
+.faq[open] summary svg { transform: rotate(45deg); }
+
+/* Scroll reveal: content is visible without JS; only hidden once JS has run. */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+.js .reveal.in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, .js .reveal { transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+/* Devanagari needs more line height and no negative tracking, or matras clip */
+:lang(ne) h1, :lang(ne) h2, :lang(ne) h3 { line-height: 1.3; letter-spacing: 0; font-weight: 600; }
+:lang(ne) body, body:lang(ne) { line-height: 1.7; }
+:lang(ne) .eyebrow { letter-spacing: .04em; text-transform: none; font-size: .9rem; }
+:lang(ne) [class*='uppercase'] { text-transform: none; letter-spacing: .02em; }
