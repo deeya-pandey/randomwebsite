@@ -22,6 +22,18 @@ const en: RouteMeta[] = [
       'Meet Nova Dental Care, a Kathmandu dental clinic near Gaushala and Ratopul focused on comfortable, clearly explained dental care.',
   },
   {
+    path: '/team/',
+    title: 'Our Team | Nova Dental Care, Kathmandu',
+    description:
+      'Learn about the care team at Nova Dental Care on Gaushala–Ratopul Road, Kathmandu, and contact the clinic before your visit.',
+  },
+  {
+    path: '/testimonials/',
+    title: 'Patient Testimonials & Reviews | Nova Dental Care',
+    description:
+      'Read current patient feedback for Nova Dental Care, Kathmandu, directly on the clinic’s Google Business Profile.',
+  },
+  {
     path: '/contact/',
     title: 'Book an Appointment | Nova Dental Care, Kathmandu',
     description:
@@ -33,6 +45,8 @@ const ne: RouteMeta[] = [
   { path: '/ne/', title: 'काठमाडौँमा दन्त चिकित्सक, रातोपुल | नोभा डेन्टल केयर', description: 'नोभा डेन्टल केयर गौशाला–रातोपुल रोड, काठमाडौँमा रहेको दन्त क्लिनिक हो। जाँच, फिलिङ, रुट क्यानाल उपचार र थप। बुक गर्न फोन वा व्हाट्सएप गर्नुहोस्।' },
   { path: '/ne/services/', title: 'काठमाडौँमा दन्त सेवाहरू | नोभा डेन्टल केयर', description: 'रातोपुल, काठमाडौँको नोभा डेन्टल केयरमा जाँच, फिलिङ, रुट क्यानाल उपचार, ह्वाइटनिङ र थप सेवा सरल भाषामा।' },
   { path: '/ne/about/', title: 'क्लिनिकबारे | नोभा डेन्टल केयर, काठमाडौँ', description: 'गौशाला र रातोपुल नजिकै रहेको काठमाडौँको नोभा डेन्टल केयर: आरामदायी र स्पष्ट रूपमा बुझाइने दन्त उपचारमा केन्द्रित क्लिनिक।' },
+  { path: '/ne/team/', title: 'हाम्रो टोली | नोभा डेन्टल केयर, काठमाडौँ', description: 'काठमाडौँको गौशाला–रातोपुल रोडस्थित नोभा डेन्टल केयरको हेरचाह टोलीबारे जान्नुहोस् र भ्रमणअघि क्लिनिकसँग सम्पर्क गर्नुहोस्।' },
+  { path: '/ne/testimonials/', title: 'बिरामीका प्रतिक्रिया र समीक्षा | नोभा डेन्टल केयर', description: 'नोभा डेन्टल केयर, काठमाडौँबारे बिरामीका हालका प्रतिक्रिया क्लिनिकको गुगल बिजनेस प्रोफाइलमा पढ्नुहोस्।' },
   { path: '/ne/contact/', title: 'अपोइन्टमेन्ट बुक गर्नुहोस् | नोभा डेन्टल केयर, काठमाडौँ', description: 'गौशाला–रातोपुल रोड, काठमाडौँको नोभा डेन्टल केयरमा अपोइन्टमेन्टको अनुरोध गर्नुहोस्। फोन, व्हाट्सएप वा फारम। दिशानिर्देश र समय भित्र।' },
 ].map((r) => ({ ...r, lang: 'ne' as const }))
 

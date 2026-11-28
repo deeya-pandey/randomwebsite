@@ -5,6 +5,8 @@ import Home from './pages/Home'
 import Services from './pages/Services'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Team from './pages/Team'
+import Testimonials from './pages/Testimonials'
 import NotFound from './pages/NotFound'
 
 function ScrollManager() {
@@ -25,6 +27,8 @@ export default function App() {
           <Route key={p + 'h'} path={p || '/'} element={<Home />} />,
           <Route key={p + 's'} path={`${p}/services/*`} element={<Services />} />,
           <Route key={p + 'a'} path={`${p}/about/*`} element={<About />} />,
+          <Route key={p + 't'} path={`${p}/team/*`} element={<Team />} />,
+          <Route key={p + 'r'} path={`${p}/testimonials/*`} element={<Testimonials />} />,
           <Route key={p + 'c'} path={`${p}/contact/*`} element={<Contact />} />,
         ])}
         <Route path="*" element={<NotFound />} />

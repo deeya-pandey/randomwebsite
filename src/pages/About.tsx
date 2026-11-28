@@ -59,7 +59,7 @@ export default function About() {
             <p className="eyebrow">{t.tEyebrow}</p>
             <h2 className="mt-4 text-4xl">{t.tH2}</h2>
             <p className="mt-4 max-w-xl text-ivory/75">{t.tText}</p>
-            <Link to={l('/contact/')} className="btn btn-ghost mt-7">{c.nav.contact} <ArrowRight size={18} /></Link>
+            <Link to={l('/team/')} className="btn btn-ghost mt-7">{c.nav.team} <ArrowRight size={18} /></Link>
           </Reveal>
         </div>
       </section>

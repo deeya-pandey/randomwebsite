@@ -1,6 +1,6 @@
 /** All user-facing UI text in English and Nepali. Nepali needs review by a native speaker before launch. */
 const en = {
-  nav: { home: 'Home', services: 'Services', about: 'About', contact: 'Contact', book: 'Book a visit', skip: 'Skip to content', openMenu: 'Open menu', closeMenu: 'Close menu', switchLabel: 'नेपाली', switchAria: 'नेपालीमा हेर्नुहोस्', homeAria: 'Nova Dental Care home' },
+  nav: { home: 'Home', services: 'Services', about: 'About', team: 'Our team', testimonials: 'Testimonials', contact: 'Contact', book: 'Book a visit', skip: 'Skip to content', openMenu: 'Open menu', closeMenu: 'Close menu', switchLabel: 'नेपाली', switchAria: 'नेपालीमा हेर्नुहोस्', homeAria: 'Nova Dental Care home' },
   footer: { photoNote: 'Photographs are illustrative stock images (Pexels).', blurb: 'A dental clinic on Gaushala–Ratopul Road, Kathmandu. We love to see you smile.', visit: 'Visit', directions: 'Get directions', callMsg: 'Call or message', wa: 'WhatsApp us', call: 'Call', waShort: 'WhatsApp', ig: 'Nova Dental Care on Instagram', tt: 'Nova Dental Care on TikTok' },
   address: 'Gaushala–Ratopul Road, Kathmandu',
   hoursShort: 'Opens from 9:00 AM',
@@ -59,6 +59,27 @@ const en = {
     tAlt: 'Dentist portrait to be added',
     fH2: 'Find us on Ratopul Road.', fBtn: 'Directions & booking',
   },
+  team: {
+    eyebrow: 'Our team', h1: 'The people behind your care.',
+    lead: 'A good dental visit starts with knowing who is looking after you. Meet the Nova Dental Care team here as their profiles are confirmed.',
+    status: 'Profiles are being confirmed',
+    statusText: 'Names, qualifications and Nepal Medical Council or Nepal Dental Council registration details will be added after confirmation by the clinic.',
+    cards: ['Dentist profile', 'Clinical support', 'Front desk'],
+    cardText: 'Details to be confirmed by the clinic.',
+    askEyebrow: 'Before your visit', askH2: 'Want to know who you’ll see?',
+    askText: 'Call or message us before booking and we’ll help with the details available for your visit.', askBtn: 'Ask the clinic',
+  },
+  testimonials: {
+    eyebrow: 'Patient feedback', h1: 'Words from our patients.',
+    lead: 'The most useful feedback is shared where patients can speak in their own words. Read the clinic’s current reviews on Google.',
+    verified: 'Reviews hosted by Google',
+    verifiedText: 'We do not copy, edit or select reviews for this page. Google displays the latest feedback on the clinic’s Business Profile.',
+    read: 'Read Google reviews', write: 'Write a review',
+    noteEyebrow: 'Visited us recently?', noteH2: 'Your experience can help the next patient.',
+    noteText: 'A short, honest review helps neighbours looking for dental care in Kathmandu. Thank you for taking the time.',
+    careEyebrow: 'Our promise', careH2: 'Care that is calm, clear and considered.',
+    careText: 'We listen first, explain your options in plain language, and give you time to decide what feels right.', careBtn: 'Learn about the clinic',
+  },
   contact: {
     eyebrow: 'Contact & booking', h1: 'Book your visit.', formH: 'Appointment inquiry', formSub: 'Takes under a minute. We’ll contact you to agree a time.',
     wa: 'Chat on WhatsApp', mapTitle: 'Map showing Nova Dental Care on Gaushala–Ratopul Road, Kathmandu', openMaps: 'Open in Google Maps',
@@ -94,7 +115,7 @@ const en = {
 export type Copy = typeof en
 
 const ne: Copy = {
-  nav: { home: 'गृहपृष्ठ', services: 'सेवाहरू', about: 'हाम्रोबारे', contact: 'सम्पर्क', book: 'भ्रमण बुक गर्नुहोस्', skip: 'सामग्रीमा जानुहोस्', openMenu: 'मेनु खोल्नुहोस्', closeMenu: 'मेनु बन्द गर्नुहोस्', switchLabel: 'English', switchAria: 'View in English', homeAria: 'नोभा डेन्टल केयर गृहपृष्ठ' },
+  nav: { home: 'गृहपृष्ठ', services: 'सेवाहरू', about: 'हाम्रोबारे', team: 'हाम्रो टोली', testimonials: 'प्रतिक्रियाहरू', contact: 'सम्पर्क', book: 'भ्रमण बुक गर्नुहोस्', skip: 'सामग्रीमा जानुहोस्', openMenu: 'मेनु खोल्नुहोस्', closeMenu: 'मेनु बन्द गर्नुहोस्', switchLabel: 'English', switchAria: 'View in English', homeAria: 'नोभा डेन्टल केयर गृहपृष्ठ' },
   footer: { photoNote: 'तस्बिरहरू उदाहरणका लागि राखिएका स्टक फोटो हुन् (Pexels)।', blurb: 'काठमाडौँको गौशाला–रातोपुल रोडमा रहेको दन्त क्लिनिक। तपाईंको मुस्कान देख्न हामी रमाउँछौँ।', visit: 'भ्रमण', directions: 'दिशानिर्देश', callMsg: 'फोन वा सन्देश', wa: 'हामीलाई व्हाट्सएप गर्नुहोस्', call: 'फोन', waShort: 'व्हाट्सएप', ig: 'इन्स्टाग्राममा नोभा डेन्टल केयर', tt: 'टिकटकमा नोभा डेन्टल केयर' },
   address: 'गौशाला–रातोपुल रोड, काठमाडौँ',
   hoursShort: 'बिहान ९:०० बजेदेखि खुल्छ',
@@ -152,6 +173,27 @@ const ne: Copy = {
     tText: 'दन्त चिकित्सकको नाम, योग्यता र दर्ता विवरणसहितको परिचय क्लिनिकले पुष्टि गरेपछि यहाँ थपिनेछ। तबसम्म, तपाईंलाई कसले हेर्नुहुन्छ भनेर सोध्न कृपया फोन गर्नुहोस्।',
     tAlt: 'दन्त चिकित्सकको तस्बिर थपिनेछ',
     fH2: 'रातोपुल रोडमा हामीलाई भेट्नुहोस्।', fBtn: 'दिशानिर्देश र बुकिङ',
+  },
+  team: {
+    eyebrow: 'हाम्रो टोली', h1: 'तपाईंको हेरचाहका पछाडिका मानिसहरू।',
+    lead: 'राम्रो दन्त उपचार भ्रमण तपाईंलाई कसले हेरचाह गर्दैछ भन्ने थाहा हुनबाट सुरु हुन्छ। प्रोफाइलहरू पुष्टि हुँदै जाँदा यहाँ नोभा डेन्टल केयर टोलीलाई भेट्नुहोस्।',
+    status: 'प्रोफाइलहरू पुष्टि हुँदैछन्',
+    statusText: 'क्लिनिकले पुष्टि गरेपछि नाम, योग्यता र नेपाल मेडिकल काउन्सिल वा नेपाल डेन्टल काउन्सिलको दर्ता विवरण थपिनेछ।',
+    cards: ['दन्त चिकित्सकको परिचय', 'क्लिनिकल सहयोग', 'फ्रन्ट डेस्क'],
+    cardText: 'विवरण क्लिनिकले पुष्टि गर्न बाँकी छ।',
+    askEyebrow: 'भ्रमणअघि', askH2: 'तपाईंलाई कसले हेर्नुहुन्छ जान्न चाहनुहुन्छ?',
+    askText: 'बुक गर्नुअघि फोन वा सन्देश गर्नुहोस्, तपाईंको भ्रमणका लागि उपलब्ध विवरणमा हामी मद्दत गर्नेछौँ।', askBtn: 'क्लिनिकलाई सोध्नुहोस्',
+  },
+  testimonials: {
+    eyebrow: 'बिरामीका प्रतिक्रिया', h1: 'हाम्रा बिरामीका शब्दहरू।',
+    lead: 'बिरामीले आफ्नै शब्दमा राखेका प्रतिक्रिया नै सबैभन्दा उपयोगी हुन्छन्। गुगलमा क्लिनिकका हालका समीक्षा पढ्नुहोस्।',
+    verified: 'गुगलमा रहेका समीक्षाहरू',
+    verifiedText: 'हामी यस पृष्ठका लागि समीक्षा प्रतिलिपि, सम्पादन वा छनोट गर्दैनौँ। क्लिनिकको गुगल बिजनेस प्रोफाइलमा गुगलले नयाँ प्रतिक्रिया देखाउँछ।',
+    read: 'गुगल समीक्षा पढ्नुहोस्', write: 'समीक्षा लेख्नुहोस्',
+    noteEyebrow: 'हालै आउनुभएको थियो?', noteH2: 'तपाईंको अनुभवले अर्को बिरामीलाई मद्दत गर्न सक्छ।',
+    noteText: 'सानो, इमानदार समीक्षाले काठमाडौँमा दन्त उपचार खोजिरहेका छिमेकीलाई मद्दत गर्छ। समय दिनुभएकोमा धन्यवाद।',
+    careEyebrow: 'हाम्रो वाचा', careH2: 'शान्त, स्पष्ट र विचारशील हेरचाह।',
+    careText: 'हामी पहिले सुन्छौँ, सरल भाषामा विकल्प बुझाउँछौँ र तपाईंलाई उपयुक्त लाग्ने निर्णयका लागि समय दिन्छौँ।', careBtn: 'क्लिनिकबारे जान्नुहोस्',
   },
   contact: {
     eyebrow: 'सम्पर्क र बुकिङ', h1: 'आफ्नो भ्रमण बुक गर्नुहोस्।', formH: 'अपोइन्टमेन्ट अनुरोध', formSub: 'एक मिनेटभन्दा कम लाग्छ। समय मिलाउन हामी तपाईंलाई सम्पर्क गर्नेछौँ।',

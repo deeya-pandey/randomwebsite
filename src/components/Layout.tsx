@@ -12,6 +12,8 @@ export function Layout({ children }: { children: ReactNode }) {
   const nav = [
     { to: l('/services/'), label: c.nav.services },
     { to: l('/about/'), label: c.nav.about },
+    { to: l('/team/'), label: c.nav.team },
+    { to: l('/testimonials/'), label: c.nav.testimonials },
     { to: l('/contact/'), label: c.nav.contact },
   ]
   const wa = waLink(c.waHello)
@@ -31,19 +33,19 @@ export function Layout({ children }: { children: ReactNode }) {
             <Logo className="h-[52px] w-auto" />
             <span className="border-l border-gold/50 pl-3 font-serif text-[1.15rem] leading-tight text-ink">Dental Care<span className="block font-sans text-[0.66rem] font-semibold uppercase tracking-[0.2em] text-bronze">Pvt. Ltd. · Kathmandu</span></span>
           </Link>
-          <nav aria-label={lang === 'ne' ? 'मुख्य' : 'Main'} className="hidden items-center gap-8 md:flex">
+          <nav aria-label={lang === 'ne' ? 'मुख्य' : 'Main'} className="hidden items-center gap-4 lg:gap-6 xl:gap-8 lg:flex">
             {nav.map((n) => (
-              <NavLink key={n.to} to={n.to} className={({ isActive }) => `text-sm font-medium hover:text-bronze ${isActive ? 'text-bronze' : 'text-ink'}`}>{n.label}</NavLink>
+              <NavLink key={n.to} to={n.to} className={({ isActive }) => `whitespace-nowrap text-sm font-medium hover:text-bronze ${isActive ? 'text-bronze' : 'text-ink'}`}>{n.label}</NavLink>
             ))}
             <Link to={otherPath} hrefLang={lang === 'ne' ? 'en' : 'ne'} lang={lang === 'ne' ? 'en' : 'ne'} aria-label={c.nav.switchAria} className="rounded-full border border-ink/25 px-3 py-1.5 text-sm font-medium hover:border-bronze hover:text-bronze">{c.nav.switchLabel}</Link>
             <Link to={l('/contact/#book')} className="btn btn-gold btn-sm">{c.nav.book}</Link>
           </nav>
-          <button className="rounded p-2 md:hidden" aria-expanded={open} aria-controls="mobile-nav" aria-label={open ? c.nav.closeMenu : c.nav.openMenu} onClick={() => setOpen(!open)}>
+          <button className="rounded p-2 lg:hidden" aria-expanded={open} aria-controls="mobile-nav" aria-label={open ? c.nav.closeMenu : c.nav.openMenu} onClick={() => setOpen(!open)}>
             {open ? <X /> : <Menu />}
           </button>
         </div>
         {open && (
-          <nav id="mobile-nav" aria-label={lang === 'ne' ? 'मोबाइल' : 'Mobile'} className="border-t border-ink/10 bg-ivory px-5 pb-5 md:hidden">
+          <nav id="mobile-nav" aria-label={lang === 'ne' ? 'मोबाइल' : 'Mobile'} className="border-t border-ink/10 bg-ivory px-5 pb-5 lg:hidden">
             {[{ to: l('/'), label: c.nav.home }, ...nav].map((n) => (
               <NavLink key={n.to} to={n.to} onClick={() => setOpen(false)} className="block border-b border-ink/10 py-4 font-serif text-2xl">{n.label}</NavLink>
             ))}
